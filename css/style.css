@@ -14,3 +14,41 @@ h1:hover {color: rgb(151, 243, 13);}
 /* Стили подвала */
 .footer {background-color: #333;color: white;padding: 10px;text-align: center;
 margin-top: 20px;width: 100%;}
+.sped{
+    /* Базовые стили */
+    padding: 8px 35px 8px 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.3s ease, border-radius 0.6s ease;
+    border-radius: 11px 21px 11px 21px;
+    /* Стрелка */
+    background-color: #e9e9e9;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 22px;
+}
+/* Состояние при наведении */
+.sped:hover {
+    border-radius: 11px 11px 11px 11px;
+    border-color: #45a049;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Состояние в фокусе */
+.sped:focus {
+    outline: none;
+    border-color: #ff7e5f;
+    box-shadow: 65px rgba(76,175,80,0.2);
+}
+/* Выбранная опция */
+.sped option:checked {
+    background-color: #ff7e5f;
+    color: black;
+    font-weight: bold;
+}
