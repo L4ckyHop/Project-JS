@@ -9,7 +9,14 @@
 <body>
     <div class="header"><!-- Шапка сайта --></div>
     <div class="main" style="width: 25rem;"><!-- Основной контент -->
-        <h1>Аудио-подкаст плеер</h1><!-- Заголовок -->
+        <!-- Выбор скорости -->
+        <select class="sped" id="speedControl" onchange="changeSpeed(this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1.0x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2.0x</option>
+        </select>
     </div>
     <script src="js/script.js"></script><!-- Подключение скриптов -->
 </body>
