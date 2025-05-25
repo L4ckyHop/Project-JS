@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аудио-Подкаст Плеер</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"><!-- Кодировка -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Мета данные -->
+    <title>Аудио-подкаст плеер</title><!-- Название сайта -->
+    <link rel="stylesheet" href="css/style.css"><!-- Подключение стилей -->
 </head>
 <body>
-    <header>Подкаст-плеер</header>
-    <main>
+    <div class="header"><!-- Шапка сайта --></div>
+    <div class="main" style="width: 25rem;"><!-- Основной контент -->
+        <!-- Плеер -->
         <div class="player">
+            <!-- Какая песня сейчас будет (пока только 1) -->
             <div class="track-info">
-                <h2>Five Nights at Freddy's</h2>
-                <p>The Living Tombstone</p>
+                <h2>Never Gonna Give You Up</h2>
+                <p>Rick Astley</p>
             </div>
-            <audio id="audioPlayer" controls src="https://rus.hitmotop.com/get/music/20200327/The_Living_Tombstone_-_Five_Nights_at_Freddys_1_Song_68945151.mp3" preload="auto"></audio> </audio>
-             <div class="time-display">
+            <!-- Ссылка на музыку -->
+            <audio id="audioPlayer" src="audio/Rickrll.mp3"></audio>
+            <!-- Таймер -->
+            <div class="time-display">
                 <span id="currentTime">0:00</span>
-                /
-                <span id="duration">0:00</span>
+                <span id="duration">03:26</span>
             </div>
-            <div class="progress-bar">
-                <div class="progress-filled"></div>
-            </div>
+            <!-- Полоса для перемотки -->
+            <input type="range" id="progress" value="0" min="0" step="0.1" style="width: auto;">
+            <!-- Переключение скорости -->
             <div class="controls">
-                <button onclick="togglePlayPause()">⏯ Пауза</button>
-                <button onclick="rewind(-10)">⏪ Перемотка назад</button>
-                <button onclick="rewind(+10)">⏩ Перемотка вперёд</button>
+                <button>▶ Воспроизвести</button>
+                <select class="sped" id="speedControl">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1.0x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2.0x</option>
+                </select>
             </div>
-            <div id="subtitleDisplay" class="subtitle">
+            <!-- Контейнер для субтитров-->
+            <div class="lyrics-container">
+                <div id="lyrics"></div>
+            </div>
         </div>
-        </main>
-      <script src="js/script.js"></script><!-- Подключение скриптов 
+    </div>
+    <script src="js/script.js"></script><!-- Подключение скриптов -->
 </body>
 </html>
