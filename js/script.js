@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Аутро 
         { start: 116.0, end: 213.0, text: "♪ Конец ♪" }
     ];
-    // Запуск инициализации
+    
+    // Запуск инициализациип
     initPlayer();
 });
