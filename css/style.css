@@ -1,16 +1,104 @@
-/* Основные стили страницы */
-body {font-family: 'Arial', sans-serif;background-image: radial-gradient(circle, #ff7e5f, #feb47b);margin: 0;padding: 0;
-display: flex;flex-direction: column;align-items: center;justify-content: center;
-transition: background-color 0.8s ease;color: rgb(255, 255, 255);}
-body:hover {background-color: #899ca8;}
-/* Стили контента */
-.header {background-color: #333;color: white;padding: 20px;
-text-align: center;margin-bottom: 20px;width: 100%;}
-/* Стили основной части */
-.main {background-color: #888888;padding: 20px;margin: 0 20px;box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);}
-/* Стили для заголовка */
-h1 {color: #ffffff;margin-bottom: 20px;transition: color 0.6s ease;text-shadow: 2px 2px 4px #000000;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
-h1:hover {color: rgb(151, 243, 13);}
-/* Стили подвала */
-.footer {background-color: #333;color: white;padding: 10px;text-align: center;
-margin-top: 20px;width: 100%;}
+ /* Основные стили */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #584a4a; /* Светлый фон */
+            color: #d6d6d6e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffcc00; /* Яркий жёлтый цвет шапки */
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .player {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.1); /* Прозрачность фона плеера */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .track-info h2 {
+            color: #ffcc00;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .track-info p {
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        .time-display span {
+            display: inline-block;
+            width: 50px;
+            text-align: center;
+        }
+
+        .controls button {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #ffcc00;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 5px;
+            background-color: #ddd;
+            border-radius: 5px;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .progress-filled {
+            height: 100%;
+            background-color: #ffcc00;
+            border-radius: inherit;
+            transition: width 0.3s ease;
+        }
+
+        .subtitle {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            .track-info h2 {
+                font-size: 20px;
+            }
+            .track-info p {
+                font-size: 14px;
+            }
+        }
