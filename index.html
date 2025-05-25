@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"><!-- Кодировка -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Мета данные -->
-    <title>Аудио-подкаст плеер</title><!-- Название сайта -->
-    <link rel="stylesheet" href="css/style.css"><!-- Подключение стилей -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудио-Подкаст Плеер</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header"><!-- Шапка сайта --></div>
-    <div class="main" style="width: 25rem;"><!-- Основной контент -->
-        <h1>Аудио-подкаст плеер</h1><!-- Заголовок -->
-    </div>
-    <script src="js/script.js"></script><!-- Подключение скриптов -->
+    <header>Подкаст-плеер</header>
+    <main>
+        <div class="player">
+            <div class="track-info">
+                <h2>Five Nights at Freddy's</h2>
+                <p>The Living Tombstone</p>
+            </div>
+            <audio id="audioPlayer" controls src="https://rus.hitmotop.com/get/music/20200327/The_Living_Tombstone_-_Five_Nights_at_Freddys_1_Song_68945151.mp3" preload="auto"></audio> </audio>
+             <div class="time-display">
+                <span id="currentTime">0:00</span>
+                /
+                <span id="duration">0:00</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-filled"></div>
+            </div>
+            <div class="controls">
+                <button onclick="togglePlayPause()">⏯ Пауза</button>
+                <button onclick="rewind(-10)">⏪ Перемотка назад</button>
+                <button onclick="rewind(+10)">⏩ Перемотка вперёд</button>
+            </div>
+        </div>
+        </main>
+      <script src="js/script.js"></script><!-- Подключение скриптов 
 </body>
 </html>
